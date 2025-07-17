@@ -7,32 +7,35 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Navigation -->
   <nav class="navbar">
     <div class="brand">
       <h1>Abhijeet Singh</h1>
     </div>
     <ul class="nav-menu">
       <li><a href="#">Home</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Skills</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
+  <!-- Introduction Section -->
   <section class="info">
     <div class="left">
       <h2 class="intro">MERN Stack Developer</h2>
       <p class="desc">I design and develop full-stack web applications using MongoDB, Express, React, and Node.js.</p>
-      <a href="#"><button class="button">View My Projects</button></a>
+      <a href="#projects"><button class="button">View My Projects</button></a>
     </div>
 
     <div class="right">
-      <img src="../wp3668787-naruto-jiraiya-wallpapers.jpg" alt="Abhijeet Singh" class="profile-image" />
+      <img src="img.jpg" alt="Abhijeet Singh" class="profile-image" />
     </div>
   </section>
 
-  <section class="services-section">
+  <!-- Services Section -->
+  <section class="services-section" id="services">
     <h2 class="section-title">Services</h2>
     <div class="services">
       <div class="service-card">
@@ -41,16 +44,67 @@
         <p>Responsive and modern websites using latest technologies.</p>
       </div>
       <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/2721/2721295.png" alt="App Dev" />
+        <img src="https://cdn-icons-png.flaticon.com/512/2721/2721295.png" alt="API Dev" />
         <h3>API Development</h3>
         <p>Secure and scalable REST APIs with Node & Express.</p>
       </div>
       <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055672.png" alt="UI/UX" />
+        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055672.png" alt="Frontend" />
         <h3>Frontend Design</h3>
         <p>Interactive and intuitive UI with React and CSS.</p>
       </div>
     </div>
   </section>
+
+  <!-- Projects Section -->
+  <section class="projects-section" id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>MERN Project App</h3>
+        <p>A full-stack food ordering platform with user authentication and a MongoDB-powered recipe and order management backend.</p>
+        <a href="https://mern-frontend-a-five.vercel.app/" target="_blank">Live Demo</a>
+      </div>
+      <div class="project-card">
+        <h3>Task Tracker</h3>
+        <p>A task tracking app built with React and local storage.</p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>This personal portfolio built using HTML, CSS, and JavaScript.</p>
+        <a href="#" target="_blank">View Site</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills-section" id="skills">
+    <h2 class="section-title">Skills</h2>
+    <ul class="skills-list">
+      <li>HTML5 / CSS3 / JavaScript</li>
+      <li>React.js / Redux</li>
+      <li>Node.js / Express.js</li>
+      <li>MongoDB / Mongoose</li>
+      <li>RESTful APIs</li>
+      <li>Git / GitHub / Vercel</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <form class="contact-form" action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="button">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Abhijeet Singh. All rights reserved.</p>
+  </footer>
 </body>
 </html>

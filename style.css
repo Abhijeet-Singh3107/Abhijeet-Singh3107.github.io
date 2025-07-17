@@ -1,0 +1,96 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+/* Header */
+header {
+  text-align: center;
+  background-color: #4caf50;
+  color: white;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-link {
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #388e3c;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.portfolio-link:hover {
+  background-color: #2e7d32;
+}
+
+/* Section layout */
+.section {
+  margin-bottom: 2rem;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  color: #4caf50;
+  margin-bottom: 1rem;
+}
+
+.section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.section ul li {
+  margin: 0.5rem 0;
+}
+
+.section ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.section ul li a:hover {
+  color: #4caf50;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .section {
+    padding: 1rem;
+  }
+
+  .portfolio-link {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+}
