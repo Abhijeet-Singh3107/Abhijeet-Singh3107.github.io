@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <script>
+
+        let user = {};
+        let users = [];
+        const addUser = () => {
+            users.push(user);
+            console.log(users);
+            user = {};
+        }
+
+        captureName = (value) => {
+            user.name = value;
+        }
+        captureEmail = (value) => {
+            user.email = value;
+        }
+
+        addUser();
+
+    </script>
+
+
+
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <!-- <p>
+        <input type="text" name="" id="" placeholder="Enter Name" onchange="captureName(event.target.value)">
+    </p>
+    <p>
+        <input type="email" name="" id="" placeholder="Enter Emmail" onchange="captureEmail(event.target.value)">
+    </p>
+    <input type="submit" value="Submit" onclick="addUser()"> -->
+
+    <p>
+        <input type="text" name="" id="" placeholder="Enter Name" onchange="user.name = event.target.value">
+    </p>
+    <p>
+        <input type="email" name="" id="" placeholder="Enter Emmail" onchange="user.email = event.target.value">
+    </p>
+    <input type="submit" value="Submit" onclick="addUser()">
+</body>
+</html>

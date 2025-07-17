@@ -1,0 +1,48 @@
+        --> rename the all the field
+db.LPU_Employee.updateMany(
+    {}, 
+    { $rename : {points : "score"} }
+);
+
+        --> remove the score field
+db.LPU_Employee.updateMany({} , { $unset : {points : "score" }});
+
+        --> push operator - it is an array operator, it will push Java in skills array for everyone
+            -> set only sets one value while push creates an array...
+db.LPU_Employee.updateMany({} , { $push : {skills : "JAVA" }});
+
+    -> with filter
+db.LPU_Employee.updateMany({email : "john@gmail.com} , { $push : {skills : "MERN" }});
+
+        --> to remove any value from skills array - use $pull operator
+db.LPU_Employee.updateMany({email : "john@gmail.com} , { $pull : {skills : "MERN" }});
+
+        --> if want unique value in the array - use $addToSet
+db.LPU_Employee.updateMany({email : "john@gmail.com} , { $addToSet : {skills : "MERN" }});
+
+        --> $pop operator
+    -> removes the last value of the array
+db.LPU_Employee({},{$pop : {skills : 1}});
+    -> removes the first value of the array
+db.LPU_Employee({},{$pop : {skills : -1}});
+
+        --> upsert = (update + insert) if the filter matches it will update that, if not it will insert.
+db.LPU_Employee({email: "brian@gmail.com"}, {$set : {name : "Brian"}}, {upsert : true});
+
+        --> delete
+db.LPU_Employee({},)
+
+        --> getIndexes
+db.LPU_Employee.getIndexes()
+    -> to set email as an index
+db.LPU_Employee.createIndex( {email : 1} );
+
+        --> to check performance
+db.LPU_Employee.find( {email : "john@gmail.com"} ).explain("executionStack"); {if email is indexed, go check totalDocsExamindex, performance have improved}
+
+Ques. Which field is indexed by default in mongoDB -> id field  
+
+        --> drop index
+db.LPU_Employee.dropIndex({"email_1"});
+
+
